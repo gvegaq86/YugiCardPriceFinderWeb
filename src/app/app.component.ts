@@ -6,11 +6,19 @@ import { Observable }      from 'rxjs';
 @Component({
   selector: 'app-root',
   template: `
+    <html lang="eng">
+    <head><link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    </head>
+    <body>
+    <main class="main_div container">
     <div>
-      <h2>Yugi Price Finder</h2>
       <app-dynamic-form [filters]="filters$ | async"></app-dynamic-form>
     </div>
+    </main>
+    </body>
+    </html>
   `,
+  styleUrls: ['./dynamic-form.component.css'],
   providers:  [FiltersService]
 })
 export class AppComponent {

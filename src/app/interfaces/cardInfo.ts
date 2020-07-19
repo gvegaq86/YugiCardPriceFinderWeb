@@ -1,4 +1,4 @@
-export interface Damaged {
+export interface GenericList {
   card_key: string;
   card_name: string;
   condition: string;
@@ -12,100 +12,34 @@ export interface Damaged {
   web_site: string;
 }
 
-export interface HeavilyPlayed {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
+export interface Results1 {
+  Damaged: GenericList[];
+  "Heavily Played": GenericList[];
+  "Lightly Played": GenericList[];
+  "Moderately Played": GenericList[];
+  "Near Mint": GenericList[];
+  Played: GenericList[];
+  "See Image For Condition": GenericList[];
 }
 
-export interface LightlyPlayed {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
+export interface CardInfo2 {
+  results: GenericList[];
 }
 
-export interface ModeratelyPlayed {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
-}
-
-export interface NearMint {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
-}
-
-export interface Played {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
-}
-
-export interface SeeImageForCondition {
-  card_key: string;
-  card_name: string;
-  condition: string;
-  edition: string;
-  expansion: string;
-  image: string;
-  price: string;
-  pricec: string;
-  quantity: number;
-  rarity: string;
-  web_site: string;
-}
-
-export interface Results {
-  Damaged: Damaged[];
-  "Heavily Played": HeavilyPlayed[];
-  "Lightly Played": LightlyPlayed[];
-  "Moderately Played": ModeratelyPlayed[];
-  "Near Mint": NearMint[];
-  Played: Played[];
-  "See Image For Condition": SeeImageForCondition[];
+export interface Editions {
+  first_Edition: GenericList[];
+  Unlimited: GenericList[];
+  Limited_Edition: GenericList[];
 }
 
 export interface CardInfo {
   results: Results;
+}
+
+export interface Results {
+  card_key: string;
+  card_name: string;
+  expansion: string;
+  image: string; 
+  card_list: GenericList[];
 }

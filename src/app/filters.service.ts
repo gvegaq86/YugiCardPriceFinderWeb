@@ -13,9 +13,9 @@ export class FiltersService {
     let filters: FiltersBase<string>[] = [
 
       new DropdownFilters({
-        key: 'Condicion',
+        key: 'condition',
         label: 'Condicion',
-        value: 'NM',
+        value: '',
         options: [
           {key: 'NM',  value: 'Near Mint'},
           {key: 'LP',  value: 'LightlyPlayed'},
@@ -28,16 +28,16 @@ export class FiltersService {
 
       new TextboxFilters({
         key: 'code',
-        label: 'Codigo',
+        label: 'Código de la carta',
         value: 'LOD-000',
         required: true,
         order: 1
       }),
 
       new DropdownFilters({
-        key: 'Edition',
-        label: 'Edition',
-        value: 'Unlimited',
+        key: 'edition',
+        label: 'Edición',
+        value: '',
         options: [
           {key: '1st Edition',  value: '1st Edition'},
           {key: 'Unlimited',  value: 'Unlimited'},
@@ -47,7 +47,7 @@ export class FiltersService {
       }),
 
       new DropdownFilters({
-        key: 'Website',
+        key: 'website',
         label: 'Website',
         options: [
           {key: 'TYT',  value: 'TYT'},

@@ -6,12 +6,12 @@ import { FiltersBase } from '../filters-base';
 
 @Injectable()
 export class FiltersControlService {
-  
+  private c: CardInfo;
   constructor(private http: HttpClient
   ) { }
   
   getPrice(set_code: string, condition: string, edition: string, website: string) {
-    var path = `/api/get_price?set_code=${set_code}`
+    var path = `/api/get_price_by_edition?set_code=${set_code}&hideoos=True`
 
     if(condition != ""){
       path = `${path}&condition=${condition}`
@@ -24,7 +24,7 @@ export class FiltersControlService {
     }
 
     //return this.http.get<CardInfo>(path);
-    return this.http.get<any>(path);
+    return this.http.get<CardInfo>(path);
   }
 
   toFormGroup(filters: FiltersBase<string>[] ) {
