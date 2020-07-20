@@ -309,11 +309,55 @@ button{font-family:inherit;font-size:100%;line-height:1.15;overflow:visible;text
 
 }
 
-.main_div{   
-  position: absolute;
-  left: 25%;
-  right: -25%;
+@media (min-width: 768px){
+  .form-filters{   
+    position: absolute;
+    left: 25%;
+    right: -25%;
+  }
 }
+
+@media (min-width: 360px){
+  .form-filters{   
+    left: 50px;
+    right: 250x;
+  }
+  .div-info{
+    position: absolute;
+    margin-top: 170px;
+  }
+
+  .div-content{
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      height: 20px;
+  }
+  
+  .div-image{
+    height: 55%;
+  }
+
+  .iimage{
+    margin-left: 115%;
+    margin-top: 30%;
+  }
+
+  .div-title{
+    position: absolute;
+    padding-top: 8%;
+    text-align: center;
+  }
+
+  .col11{
+    text-align: center;
+  }
+
+  .div-flex{
+    display: flex;
+  }
+}
+
 
 button {
   background: #0080fa;

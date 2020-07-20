@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "build": "ng build",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve --port 1245",
     "test": "ng test",
     "lint": "tslint ./src/**/*.ts -t verbose",
     "e2e": "ng e2e"

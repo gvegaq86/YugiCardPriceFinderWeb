@@ -11,7 +11,8 @@ export class FiltersControlService {
   ) { }
   
   getPrice(set_code: string, condition: string, edition: string, website: string) {
-    var path = `/api/get_price_by_edition?set_code=${set_code}&hideoos=True`
+    var path = `https://yugipricefinderapi.uc.r.appspot.com/api/get_price_by_edition?set_code=${set_code}&hideoos=True`
+
 
     if(condition != ""){
       path = `${path}&condition=${condition}`
